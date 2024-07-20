@@ -1,0 +1,255 @@
+/* Preventyss.css */
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #cfd8dc;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+}
+
+.section {
+    flex: 1 1 calc(50% - 40px);
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 500px;
+    border-radius: 10px;
+}
+
+.medical {
+    background-image: url('imagen_principal_medicentro.jpg');
+}
+
+.occupational {
+    background-image: url('imagen_principal_salud_ocupacional.jpg');
+}
+
+.section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.section img {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: none;
+    padding: 15px 25px;
+    margin-top: 20px;
+    background-color: #00796b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: absolute;
+    bottom: 20px;
+}
+
+.section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.section:hover .btn {
+    display: inline-block;
+    transform: scale(1.1);
+}
+
+.btn:hover {
+    background-color: #004d40;
+}
+
+footer {
+    background-color: #00796b;
+    color: white;
+    padding: 26px 40px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.contact-info, .social-media {
+    margin: 0;
+    padding: 0;
+    padding-right: 100px;
+}
+
+.contact-info p, .social-link {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.contact-info .icon, .social-link .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    color: #cfd8dc;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
+    .section {
+        width: 100%;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .section {
+        flex: 1 1 50%;
+        min-height: 400px;
+    }
+
+    .section h1 {
+        font-size: 2em;
+    }
+
+    .section p {
+        font-size: 1.2em;
+    }
+}
